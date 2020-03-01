@@ -1,0 +1,15 @@
+version: "3.7"
+
+services: 
+  nginx:
+    image: juvoitalo/nginx:alpine
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+    - bubble
+    ports:
+    - 8080:80
+  
+networks:
+  bubble:
